@@ -1,5 +1,7 @@
 # Barely Spotify Backend
 
+**Live API URL:** https://your-render-app-name.onrender.com
+
 A Node.js and Express backend for a music streaming platform. It features role-based authentication (Users and Artists), secure file uploading using ImageKit, and music/album management with MongoDB.
 
 ## Tech Stack
