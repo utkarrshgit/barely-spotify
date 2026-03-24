@@ -34,7 +34,7 @@ IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
    ```
 2. **Install dependencies:**
    ```bash
-   npm install @imagekit/nodejs bcryptjs cookie-parser dotenv express jsonwebtoken mongoose multer
+   npm install
    ```
 3. **Start the server:**
    ```bash
@@ -54,8 +54,8 @@ IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
 ### Music & Albums (`/api/music`)
 | Method | Endpoint | Description | Access |
 | :--- | :--- | :--- | :--- |
-| POST | `/upload` | Upload a music file (multipart/form-data) | Artist |
-| POST | `/album` | Create a new album | Artist |
+| POST | `/upload` | Upload a music file (`multipart/form-data`, key: `music`) | Artist |
+| POST | `/album` | Create a new album (`title`, `musicIds` array) | Artist |
 | GET | `/` | Fetch a list of music tracks | Authenticated User |
 | GET | `/albums` | Fetch all albums | Authenticated User |
 | GET | `/albums/:albumId` | Fetch specific album details and associated tracks | Authenticated User |
