@@ -29,7 +29,7 @@ IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
 
 1. Install dependencies:
 ```bash
-npm install
+npm install @imagekit/nodejs bcryptjs cookie-parser dotenv express jsonwebtoken mongoose multer
 ```
 
 2. Start the development server:
