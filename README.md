@@ -17,13 +17,30 @@ A Node.js and Express backend REST API for a music streaming application. It sup
 * **Album Management:** Artists can group uploaded tracks into albums.
 
 ## Environment Variables
-Create a `.env` file in the root directory and configure the following variables:
+Create a `.env` file in the `root/backend` directory and configure the following variables:
 ```env
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
 ```
+
+## Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/utkarrshgit/barely-spotify.git
+   cd barely-spotify/backend
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install @imagekit/nodejs bcryptjs cookie-parser dotenv express jsonwebtoken mongoose multer
+   ```
+3. **Start the server:**
+   ```bash
+   npm run dev
+   ```
+   The server will start on `http://localhost:3000`.
 
 ## API Endpoints
 
@@ -42,3 +59,32 @@ IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
 | GET | `/` | Fetch a list of music tracks | Authenticated User |
 | GET | `/albums` | Fetch all albums | Authenticated User |
 | GET | `/albums/:albumId` | Fetch specific album details and associated tracks | Authenticated User |
+
+## Project Structure
+
+```text
+barely-spotify/
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   ├── auth.controller.js
+│   │   │   └── music.controller.js
+│   │   ├── db/
+│   │   │   └── db.js
+│   │   ├── middlewares/
+│   │   │   └── auth.middleware.js
+│   │   ├── models/
+│   │   │   ├── album.model.js
+│   │   │   ├── music.model.js
+│   │   │   └── user.model.js
+│   │   ├── routes/
+│   │   │   ├── auth.routes.js
+│   │   │   └── music.routes.js
+│   │   ├── services/
+│   │   │   └── storage.service.js
+│   │   └── app.js
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
+├── .gitignore
+└── README.md
